@@ -198,8 +198,8 @@ const { pathname } = Astro.url;
 											href={translatePath(page.url)}
 											class={`inline-block cursor-pointer px-1 py-[0.33rem] ${
 												page.url === pathname ||
-												page.url === pathname.replace(/^\/it|\/$/, "") ||
-												(page.url === "/blog" && (pathname.startsWith("/blog") || pathname.startsWith("/it/blog")))
+												page.url === pathname.replace(/^\/es|\/$/, "") ||
+												(page.url === "/blog" && (pathname.startsWith("/blog") || pathname.startsWith("/es/blog")))
 													? "active"
 													: ""
 											}`}>
@@ -213,11 +213,11 @@ const { pathname } = Astro.url;
 								))
 							}
 							<li>
-								<a href={translatePath(path, `${lang === "it" ? "en" : "it"}`)} class="inline-block cursor-pointer px-1 py-[0.33rem]">
+								<a href={translatePath(path, `${lang === "es" ? "en" : "es"}`)} class="inline-block cursor-pointer px-1 py-[0.33rem]">
 									<span class="menu-item-container inline-block">
 										<span
 											class="menu-item px-4 py-1 font-semibold uppercase tracking-wide text-zinc-400 hover:text-white focus:text-white focus:shadow-none focus:outline-none">
-											{lang === "it" ? "en" : "it"}
+											{lang === "es" ? "en" : "es"}
 										</span>
 									</span>
 								</a>
@@ -330,16 +330,16 @@ const { pathname } = Astro.url;
 					x: () => {
 						const pathName = window.location.pathname;
 
-						if (pathName === "/" || pathName === "/it/") {
+						if (pathName === "/" || pathName === "/es/") {
 							return "9.5rem";
-						} else if (pathName.startsWith("/blog") || pathName.startsWith("/it/blog")) {
+						} else if (pathName.startsWith("/blog") || pathName.startsWith("/es/blog")) {
 							return "3.5rem";
 						}
 
 						return "-3.5rem";
 					},
 				},
-				"<",
+				"<"
 			);
 
 		const isTouchDevice = window.matchMedia("(hover: none)").matches;
