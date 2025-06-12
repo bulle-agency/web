@@ -92,6 +92,21 @@ const points = [
 			},
 		});
 
+		// Temporary dark bacgkround effect
+		gsap.to(".home-dark-section", {
+			scrollTrigger: {
+				trigger: "#services",
+				start: "bottom bottom",
+				end: "bottom 70%",
+				scrub: 0.5,
+				markers: false,
+				immediateRender: false,
+			},
+			ease: "none",
+			backgroundColor: "#18181b",
+			color: "#fff",
+		});
+
 		var pinner = gsap.timeline({
 			scrollTrigger: {
 				trigger: ".services-section .wrapper",
