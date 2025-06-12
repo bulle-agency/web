@@ -1,0 +1,11 @@
+{
+	"bracketSameLine": true,
+	"endOfLine": "crlf",
+	"objectWrap": "collapse",
+	"proseWrap": "always",
+	"printWidth": 80,
+	"semi": true,
+	"useTabs": false,
+	"tabWidth": 2,
+	"singleAttributePerLine": true
+}

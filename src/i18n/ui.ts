@@ -106,9 +106,9 @@ export const ui = {
 		"projects.see": "Ver proyecto",
 		"hero.title.main": "Creamos",
 		"hero.title.1": "webs",
-		"hero.title.2": "aplicaciones",
-		"hero.title.3": "e-commerce ",
-		"hero.title.4": "software personalizado",
+		"hero.title.2": "apps",
+		"hero.title.3": "tiendas",
+		"hero.title.4": "software",
 		"hero.subtitle":
 			"BULLE Agency se especializa en el desarrollo de soluciones digitales personalizadas que priorizan la experiencia del usuario, el rendimiento técnico y el crecimiento empresarial. Contáctanos para una consulta gratuita.",
 		"hero.scroll": "desplázate para explorar más",
