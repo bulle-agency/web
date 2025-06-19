@@ -17,8 +17,8 @@ const translatePath = useTranslatedPath(lang);
 			placeholder={t("footer.yourmail")}
 			class="pointer-events-auto relative m-0 h-full w-full cursor-text border-0 bg-transparent px-5 py-2 text-xl font-normal not-italic outline-none placeholder:text-gray-400 focus:ring-transparent"
 		/>
-		<button
-			type="submit"
+		<a
+			href="/contact/"
 			aria-label="Send newsletter form button"
 			class="pointer-events-auto absolute right-5 top-1/2 m-0 inline-block h-8 w-8 -translate-y-1/2 scale-100 transform cursor-pointer bg-transparent p-0 text-center font-normal normal-case not-italic">
 			<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,7 +29,7 @@ const translatePath = useTranslatedPath(lang);
 					fill="black">
 				</path>
 			</svg>
-		</button>
+		</a>
 	</form>
 	<div class="mx-4 mb-0 mt-2 text-black"></div>
 </div>

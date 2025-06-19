@@ -14,7 +14,7 @@ const translatePath = useTranslatedPath(lang);
 	</div>
 	<div class="mx-auto">
 		<Title class="pb-10 pt-20 uppercase" title={t("contact.title")} subtitle={t("contact.subtitle")} />
-		<form data-static-form-name="contact" class="mx-auto max-w-2xl pt-12 lg:pt-20">
+		<form class="mx-auto max-w-2xl pt-12 lg:pt-20">
 			<div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
 				<div class="form-field sm:col-span-2">
 					<label for="name" class="form-label">{t("contact.name")}*</label>
@@ -32,12 +32,12 @@ const translatePath = useTranslatedPath(lang);
 					<label for="message" class="form-label">{t("contact.message")}*</label>
 					<textarea name="message" id="message" rows="4" required></textarea>
 				</div>
-				<div class="flex gap-x-4 sm:col-span-2">
+				<!-- <div class="flex gap-x-4 sm:col-span-2">
 					<label class="text-sm leading-6 text-gray-600" id="switch-1-label">
 						{t("contact.agree")}
 						<a href="/privacy" class="font-semibold text-slate-800">privacy policy</a>.
 					</label>
-				</div>
+				</div> -->
 			</div>
 			<div class="flex pt-10">
 				<div class="squircle-bg rounded-lg bg-zinc-900">
@@ -88,3 +88,40 @@ const translatePath = useTranslatedPath(lang);
 		@apply pointer-events-auto relative m-0 w-full cursor-text rounded-lg border-0 bg-slate-200 px-5 py-2 text-xl font-normal not-italic outline-none placeholder:text-gray-400 focus:ring-slate-500;
 	}
 </style>
+
+<script type="module" is:inline>
+	const form = document.querySelector("form");
+
+	form?.addEventListener("submit", async (e) => {
+		e.preventDefault();
+
+		const formData = new FormData(form);
+		const data = {
+			nombre: formData.get("name"),
+			email: formData.get("email"),
+			empresa: formData.get("company"),
+			mensaje: formData.get("message"),
+		};
+
+		try {
+			const res = await fetch("/api/send-to-sheet", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			});
+
+			const json = await res.json();
+
+			if (res.ok && json.status === "success") {
+				alert("¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.");
+				form.reset();
+			} else {
+				alert("❌ Error al enviar el mensaje. Por favor, inténtalo de nuevo.");
+			}
+		} catch (err) {
+			//alert("❌ Error inesperado al conectar. Por favor, inténtalo de nuevo más tarde.");
+		}
+	});
+</script>
