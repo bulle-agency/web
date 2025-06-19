@@ -9,6 +9,7 @@
         "@astrojs/sitemap": "3.4.1",
         "@astrojs/tailwind": "6.0.2",
         "@cloudflare/pages-plugin-mailchannels": "0.1.5",
+        "@vercel/speed-insights": "^1.2.0",
         "astro": "5.9.2",
         "gsap": "^3.13.0",
         "tailwindcss": "3.4.1",
@@ -474,6 +475,8 @@
     "@unrouted/preset-api": ["@unrouted/preset-api@0.6.0", "", { "dependencies": { "@unrouted/core": "0.6.0", "cors": "^2.8.5", "h3": "^1.11.1" } }, "sha512-lvq4nRFr1BjjWcCedSGbBDypID499JXprxAf52aobe6KbCR7DtMtRSRVGJbVl7RD1BPICCetxl0d0Bj8r43S5Q=="],
 
     "@unrouted/preset-node": ["@unrouted/preset-node@0.6.0", "", { "dependencies": { "@unrouted/core": "0.6.0", "@unrouted/plugins": "0.6.0", "compression": "^1.7.4", "defu": "^6.1.4", "h3": "^1.11.1", "pathe": "^1.1.2", "sirv": "^2.0.4", "ufo": "^1.4.0" } }, "sha512-+D455V06TAPCcsW5RsZGf81USAvBkCfk7Lb/XAQ7xlDeB4kaV9s0y8vF3WSg/ZzlVcv32Tzdl8O9SzIR4cmbPw=="],
+
+    "@vercel/speed-insights": ["@vercel/speed-insights@1.2.0", "", { "peerDependencies": { "@sveltejs/kit": "^1 || ^2", "next": ">= 13", "react": "^18 || ^19 || ^19.0.0-rc", "svelte": ">= 4", "vue": "^3", "vue-router": "^4" }, "optionalPeers": ["@sveltejs/kit", "next", "react", "svelte", "vue", "vue-router"] }, "sha512-y9GVzrUJ2xmgtQlzFP2KhVRoCglwfRQgjyfY607aU0hh0Un6d0OUyrJkjuAlsV18qR4zfoFPs/BiIj9YDS6Wzw=="],
 
     "@vite-pwa/assets-generator": ["@vite-pwa/assets-generator@0.2.6", "", { "dependencies": { "cac": "^6.7.14", "colorette": "^2.0.20", "consola": "^3.2.3", "sharp": "^0.32.6", "sharp-ico": "^0.1.5", "unconfig": "^0.3.11" }, "bin": { "pwa-assets-generator": "bin/pwa-assets-generator.mjs" } }, "sha512-kK44dXltvoubEo5B+6tCGjUrOWOE1+dA4DForbFpO1rKy2wSkAVGrs8tyfN6DzTig89/QKyV8XYodgmaKyrYng=="],
 
