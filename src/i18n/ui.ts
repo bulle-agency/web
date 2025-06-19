@@ -88,9 +88,9 @@ export const ui = {
 		"blog.title": "Blog",
 		"blog.subtitle": "Insights, Tips, and Tech Trends",
 		"blog.gotoproject": "Go to project",
-		"footer.newsletter": "Subscribe to",
-		"footer.newsletter2": "our newsletter",
-		"footer.yourmail": "Your email",
+		"footer.newsletter": "Got an idea?",
+		"footer.newsletter2": " Send us a message.",
+		"footer.yourmail": "Hello there...",
 	},
 	es: {
 		or: "o",
@@ -174,9 +174,9 @@ export const ui = {
 		"blog.title": "Blog",
 		"blog.subtitle": "Insights, Consejos y Tendencias Tecnológicas",
 		"blog.gotoproject": "Ir al proyecto",
-		"footer.newsletter": "Suscríbete a",
-		"footer.newsletter2": "nuestro newsletter",
-		"footer.yourmail": "Tu email",
+		"footer.newsletter": "Tu idea nos interesa.",
+		"footer.newsletter2": " Escríbenos.",
+		"footer.yourmail": "Hola...",
 	},
 } as const;
 
